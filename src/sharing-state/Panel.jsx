@@ -22,7 +22,7 @@ const Panel = ({ title, children }) => {
         <>
           <br />
           <button
-            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-red-600 transition"
+            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-red-600 transition mt-5"
             onClick={() => setCount(count + 1)}
           >
             ini Count ke :{count}
