@@ -8,7 +8,7 @@ const CounterApp = () => {
   };
   return (
     <div>
-      {show2 ? <Counter name="budi" /> : <Counter name="jovian" />}
+     {show2 ? <Counter key="budi" name="budi"/> : <Counter key="jovi" name="jovian"/>}
       <input type="checkbox" checked={show2} onChange={handleChange} />
       Tampilkan Counter
     </div>
