@@ -1,33 +1,21 @@
 import React, { useState } from "react";
+import { useCounter } from "../hooks/useCounter";
 
-const initialData = {
-  name: "",
-  message: "",
-};
 const Counter = () => {
-  const [count, setCount] = useState(0);
-  const [mahasiswa, setMahasiswa] = useState(initialData);
-
-  const handleDecrement = () => {
-    alert("decrement");
-    setCount(count - 1);
-  };
-  const handleIncrement = () => {
-    alert("increment");
-
-    setCount(count + 1);
-  };
-  const handleName = (e) => {
-    setMahasiswa({
-      ...mahasiswa,
-      name: e.target.value,
-    });
-  };
+  const {
+    count,
+    handleDecrement,
+    handleIncrement,
+    handleName,
+    handleReset,
+    mahasiswa,
+  } = useCounter();
   return (
     <div style={{ display: "flex", gap: "16px" }}>
       <button onClick={handleDecrement}>Kurang</button>
       <p>{count}</p>
       <button onClick={handleIncrement}>Tambah</button>
+      <button onClick={handleReset}>RESET</button>
 
       <input
         type="text"
