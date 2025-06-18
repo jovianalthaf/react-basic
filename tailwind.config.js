@@ -3,7 +3,8 @@ export default {
     content: [
         "./index.html",
         "./src/**/*.{js,ts,jsx,tsx}",
-        "./sharing-state.html"
+        "./sharing-state.html",
+        "./profile.html"
     ],
     theme: {
         extend: {},

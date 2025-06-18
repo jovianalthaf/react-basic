@@ -2,6 +2,7 @@ import React, { useReducer, useState } from "react";
 import { useImmer, useImmerReducer } from "use-immer";
 import NoteForm from "./NoteForm";
 import NoteList from "./NoteList";
+import { NotesContext, NotesDispatchContext } from "./NoteContext";
 
 let id = 0;
 
@@ -71,35 +72,36 @@ const NoteApp = () => {
   // const [notes, setNotes] = useImmer(initialNotes);
   const [notes, dispatch] = useImmerReducer(notesReducer, initialNotes);
 
-  const handleAddNote = (text) => {
-    dispatch({
-      type: "ADD_NOTE",
-      text: text,
-    });
-  };
+  // tanpa useContext
+  // const handleAddNote = (text) => {
+  //   dispatch({
+  //     type: "ADD_NOTE",
+  //     text: text,
+  //   });
+  // };
 
-  const handleChangeNote = (note) => {
-    dispatch({
-      ...note,
-      type: "CHANGE_NOTE",
-    });
-  };
+  // const handleChangeNote = (note) => {
+  //   dispatch({
+  //     ...note,
+  //     type: "CHANGE_NOTE",
+  //   });
+  // };
 
-  const handleDeleteNote = (note) => {
-    dispatch({
-      type: "DELETE_NOTE",
-      id: note.id,
-    });
-  };
+  // const handleDeleteNote = (note) => {
+  //   dispatch({
+  //     type: "DELETE_NOTE",
+  //     id: note.id,
+  //   });
+  // };
   return (
     <div>
-      <h1>Note APP</h1>
-      <NoteForm onAddNote={handleAddNote} />
-      <NoteList
-        notes={notes}
-        onChange={handleChangeNote}
-        onDelete={handleDeleteNote}
-      />
+      <NotesContext.Provider value={notes}>
+        <NotesDispatchContext.Provider value={dispatch}>
+          <h1>Note App</h1>
+          <NoteForm />
+          <NoteList />
+        </NotesDispatchContext.Provider>
+      </NotesContext.Provider>
     </div>
   );
 };

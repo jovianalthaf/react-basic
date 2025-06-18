@@ -1,0 +1,5 @@
+import { createContext, useContext } from "react";
+
+export const NotesContext = createContext(null);
+
+export const NotesDispatchContext = createContext(null);

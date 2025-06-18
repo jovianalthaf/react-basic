@@ -17,7 +17,8 @@ export default defineConfig({
         task: "task.html",
         sharing: "sharing-state.html",
         counter: "counter.html",
-        note: "note.html"
+        note: "note.html",
+        profile:   "profile.html"
       }
     }
   }
