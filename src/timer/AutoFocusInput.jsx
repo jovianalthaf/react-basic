@@ -1,3 +1,5 @@
+import { useEffect, useRef } from "react";
+
 const AutoFocusInput = () => {
   const inputRef = useRef();
   useEffect(() => {
@@ -7,4 +9,3 @@ const AutoFocusInput = () => {
   return <input ref={inputRef} placeholder="Saya langsung fokus!" />;
 };
 export default AutoFocusInput;
-

@@ -18,8 +18,9 @@ export default defineConfig({
         sharing: "sharing-state.html",
         counter: "counter.html",
         note: "note.html",
-        profile:   "profile.html",
-        timer: "timer.html"
+        profile: "profile.html",
+        timer: "timer.html",
+        guestbook: "guestbook.html",
       }
     }
   }

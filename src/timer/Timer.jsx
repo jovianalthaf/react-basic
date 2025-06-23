@@ -23,11 +23,11 @@ const Timer = () => {
   };
   return (
     <div>
-      {/* <h1>Timer: {((now - start) / 1000).toFixed(2)} detik</h1>
+      <h1>Timer: {((now - start) / 1000).toFixed(2)} detik</h1>
       <h2>ini now {now}</h2>
       <h2>{start}</h2>
       <button onClick={handleStart}>Start</button>
-      <button onClick={handleStop}>Stop</button> */}
+      <button onClick={handleStop}>Stop</button>
 
       <input
         ref={input}
@@ -48,7 +48,9 @@ const Timer = () => {
           fontSize: "14px",
           userSelect: "none",
         }}
-      >Fokuskan input</button>
+      >
+        Fokuskan input
+      </button>
       <AutoFocusInput></AutoFocusInput>
     </div>
   );
