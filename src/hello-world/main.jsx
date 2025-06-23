@@ -15,7 +15,7 @@ createRoot(document.getElementById("root")).render(
       <HelloWorld></HelloWorld>
       <TodoList></TodoList>
       <Table />
-      <AlertButton text="Click" message="click me" />
+      <AlertButton text="Click ME" message="click me" />
       <MyButton text="Click My Button" onSmash={() => alert("U SMASH ME")} />
       <SearchForm />
       <SayHelloForm />
